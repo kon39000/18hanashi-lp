@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #f0f0f0;
+    --accent-yellow: #FFD700;
+    --bright-yellow: #FFEE00;
+    --spotify-color: #1DB954;
+    --youtube-color: #FF0000;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヒーローセクション */
+.hero {
+    background: var(--bright-yellow);
+    padding: 60px 0;
+    text-align: center;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-banner {
+    max-width: 100%;
+    height: auto;
+    animation: fadeInUp 0.8s ease-out;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-spotify {
+    background-color: var(--spotify-color);
+    color: var(--white);
+}
+
+.btn-spotify:hover {
+    background-color: #1ed760;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(29, 185, 84, 0.3);
+}
+
+.btn-youtube {
+    background-color: var(--youtube-color);
+    color: var(--white);
+}
+
+.btn-youtube:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+/* セクション共通スタイル */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+/* 番組紹介セクション */
+.about {
+    background-color: var(--secondary-color);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.schedule {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.schedule h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* MCプロフィール */
+.mc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mc-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mc-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.mc-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mc-name {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.mc-description {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.mc-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.mc-social a {
+    color: var(--text-light);
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.mc-social a:hover {
+    color: var(--primary-color);
+}
+
+/* ゲスト紹介 */
+.guests {
+    padding: 80px 0;
+}
+
+.guest-featured {
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.guest-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.guest-card.featured {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.guest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.guest-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.guest-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guest-info {
+    flex: 1;
+}
+
+.guest-name {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.guest-episode {
+    color: var(--youtube-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.guest-description {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.guest-links {
+    display: flex;
+    gap: 15px;
+}
+
+.guests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* エピソード一覧 */
+.episodes {
+    background-color: var(--secondary-color);
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.episode-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.episode-thumbnail {
+    width: 100%;
+    height: 200px;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.episode-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.episode-content {
+    padding: 25px;
+}
+
+.episode-number {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.episode-title {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+.episode-date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.episode-description {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.episode-links {
+    display: flex;
+    gap: 15px;
+}
+
+.link-spotify,
+.link-youtube {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.link-spotify {
+    color: var(--spotify-color);
+    border: 1px solid var(--spotify-color);
+}
+
+.link-spotify:hover {
+    background-color: var(--spotify-color);
+    color: var(--white);
+}
+
+.link-youtube {
+    color: var(--youtube-color);
+    border: 1px solid var(--youtube-color);
+}
+
+.link-youtube:hover {
+    background-color: var(--youtube-color);
+    color: var(--white);
+}
+
+.more-episodes {
+    text-align: center;
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* プラットフォームCTA */
+.platform-cta {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    padding: 100px 0;
+}
+
+.platform-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.platform-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 60px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.platform-btn i {
+    font-size: 3rem;
+}
+
+.platform-btn.spotify {
+    background-color: var(--white);
+    color: var(--spotify-color);
+    border: 2px solid var(--spotify-color);
+}
+
+.platform-btn.spotify:hover {
+    background-color: var(--spotify-color);
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(29, 185, 84, 0.3);
+}
+
+.platform-btn.youtube {
+    background-color: var(--white);
+    color: var(--youtube-color);
+    border: 2px solid var(--youtube-color);
+}
+
+.platform-btn.youtube:hover {
+    background-color: var(--youtube-color);
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
+}
+
+/* フッター */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-copyright {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-social a {
+    color: var(--white);
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 1;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .hero-banner {
+        max-width: 90%;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 250px;
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .mc-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .guest-card.featured {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .guest-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    
+    .guest-links {
+        justify-content: center;
+    }
+    
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .platform-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .platform-btn {
+        width: 280px;
+    }
+}

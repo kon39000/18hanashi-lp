@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18の時に聞きたかったハナシ。 - ビデオポッドキャスト</title>
+    <meta name="description" content="18の時に聞きたかったハナシ。は、あの頃の自分に伝えたい、今だから話せる本音のビデオポッドキャストです。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="hero-banner.png" alt="18の時に聞きたかったハナシ。" class="hero-banner">
+                <div class="hero-cta">
+                    <a href="https://open.spotify.com/show/2HKE3Dth7Vsro6s89AGwXt" target="_blank" class="btn btn-spotify">
+                        <i class="fab fa-spotify"></i> Spotifyで聴く
+                    </a>
+                    <a href="https://www.youtube.com/@18hanashi" target="_blank" class="btn btn-youtube">
+                        <i class="fab fa-youtube"></i> YouTubeで観る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 番組紹介セクション -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">番組について</h2>
+            <div class="about-content">
+                <p>「18の時に聞きたかったハナシ。」は、大人になった今だからこそ語れる、若い頃の自分に伝えたいメッセージを届けるビデオポッドキャストです。</p>
+                <p>人生の転機、失敗談、成功体験など、18歳の自分に聞かせたい貴重な経験談を、2人のMCが温かく、時に熱く語ります。</p>
+                <div class="schedule">
+                    <h3>配信スケジュール</h3>
+                    <p>毎週新エピソードを配信中！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MCプロフィールセクション -->
+    <section class="mc-profiles" id="mc">
+        <div class="container">
+            <h2 class="section-title">MC紹介</h2>
+            <div class="mc-grid">
+                <div class="mc-card">
+                    <div class="mc-image">
+                        <img src="mc1-suzuki.jpg" alt="鈴木匠">
+                    </div>
+                    <h3 class="mc-name">鈴木匠</h3>
+                    <p class="mc-description">MC1人目。人生の転機や失敗談、成功体験など、18歳の自分に聞かせたい貴重な経験談を語ります。</p>
+                    <div class="mc-social">
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="mc-card">
+                    <div class="mc-image">
+                        <img src="mc2-kon.jpg" alt="こん">
+                    </div>
+                    <h3 class="mc-name">こん</h3>
+                    <p class="mc-description">MC2人目。18歳の頃の自分に伝えたいメッセージを、温かく、時に熱く語ります。</p>
+                    <div class="mc-social">
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ゲスト紹介セクション -->
+    <section class="guests" id="guests">
+        <div class="container">
+            <h2 class="section-title">ゲスト紹介</h2>
+            <div class="guest-featured">
+                <div class="guest-card featured">
+                    <div class="guest-image">
+                        <img src="guest-sotaro.jpg" alt="sotaro">
+                    </div>
+                    <div class="guest-info">
+                        <h3 class="guest-name">sotaro</h3>
+                        <p class="guest-episode">第1回ゲスト</p>
+                        <p class="guest-description">第1回目の放送にゲストとして登場。18歳の頃の自分に向けた貴重なメッセージを語っていただきました。</p>
+                        <div class="guest-links">
+                            <a href="https://youtu.be/KQCrMqFZtWo?si=2KVp_SCXPSM6XnoU" target="_blank" class="btn btn-youtube">
+                                <i class="fab fa-youtube"></i> この回を観る
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="guests-grid">
+                <!-- 他のゲストカードがここに追加される -->
+            </div>
+        </div>
+    </section>
+
+    <!-- エピソード一覧セクション -->
+    <section class="episodes" id="episodes">
+        <div class="container">
+            <h2 class="section-title">過去のエピソード</h2>
+            <div class="episodes-grid">
+                <!-- エピソードカードはJavaScriptで動的に生成される -->
+            </div>
+            <div class="more-episodes">
+                <button class="btn btn-secondary" id="loadMore">もっと見る</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- プラットフォームCTAセクション -->
+    <section class="platform-cta">
+        <div class="container">
+            <h2 class="section-title">フォロー&チャンネル登録</h2>
+            <div class="platform-buttons">
+                <a href="https://open.spotify.com/show/2HKE3Dth7Vsro6s89AGwXt" target="_blank" class="platform-btn spotify">
+                    <i class="fab fa-spotify"></i>
+                    <span>Spotifyでフォロー</span>
+                </a>
+                <a href="https://www.youtube.com/@18hanashi" target="_blank" class="platform-btn youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTubeでチャンネル登録</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-title">18の時に聞きたかったハナシ。</p>
+            <p class="footer-copyright">&copy; 2024 18の時に聞きたかったハナシ。 All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
