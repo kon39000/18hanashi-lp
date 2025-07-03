@@ -19,7 +19,7 @@ const episodes = [
         title: "ゲスト：sotaro「はじめまして！18歳の自分へ」",
         date: "2024.01.01",
         description: "記念すべき第1回は、ゲストにsotaroさんをお迎えして、18歳の頃の自分に伝えたいメッセージを語ります。",
-        thumbnail: "episode-placeholder.jpg",
+        thumbnail: "",
         youtubeLink: "https://youtu.be/KQCrMqFZtWo?si=2KVp_SCXPSM6XnoU",
         spotifyLink: "https://open.spotify.com/show/2HKE3Dth7Vsro6s89AGwXt"
     },
@@ -28,7 +28,7 @@ const episodes = [
         title: "大学受験で学んだこと",
         date: "2024.01.08",
         description: "受験の成功と失敗、そこから学んだ人生の教訓について。",
-        thumbnail: "episode-placeholder.jpg",
+        thumbnail: "",
         youtubeLink: "https://www.youtube.com/@18hanashi",
         spotifyLink: "https://open.spotify.com/show/2HKE3Dth7Vsro6s89AGwXt"
     },
@@ -37,7 +37,7 @@ const episodes = [
         title: "初めての就職活動",
         date: "2024.01.15",
         description: "就活で感じた不安と、今だから言える本当に大切なこと。",
-        thumbnail: "episode-placeholder.jpg",
+        thumbnail: "",
         youtubeLink: "https://www.youtube.com/@18hanashi",
         spotifyLink: "https://open.spotify.com/show/2HKE3Dth7Vsro6s89AGwXt"
     },
@@ -46,7 +46,7 @@ const episodes = [
         title: "友人関係の築き方",
         date: "2024.01.22",
         description: "18歳の頃の友人関係と、大人になってからの友情について。",
-        thumbnail: "episode-placeholder.jpg",
+        thumbnail: "",
         youtubeLink: "https://www.youtube.com/@18hanashi",
         spotifyLink: "https://open.spotify.com/show/2HKE3Dth7Vsro6s89AGwXt"
     },
@@ -55,7 +55,7 @@ const episodes = [
         title: "初めての失恋",
         date: "2024.01.29",
         description: "恋愛で学んだこと、失恋から立ち直る方法。",
-        thumbnail: "episode-placeholder.jpg",
+        thumbnail: "",
         youtubeLink: "https://www.youtube.com/@18hanashi",
         spotifyLink: "https://open.spotify.com/show/2HKE3Dth7Vsro6s89AGwXt"
     },
@@ -64,7 +64,7 @@ const episodes = [
         title: "お金の使い方",
         date: "2024.02.05",
         description: "18歳の頃に知っておきたかったお金の知識。",
-        thumbnail: "episode-placeholder.jpg",
+        thumbnail: "",
         youtubeLink: "https://www.youtube.com/@18hanashi",
         spotifyLink: "https://open.spotify.com/show/2HKE3Dth7Vsro6s89AGwXt"
     }
@@ -78,7 +78,7 @@ function createEpisodeCard(episode) {
     return `
         <div class="episode-card">
             <div class="episode-thumbnail">
-                <img src="${episode.thumbnail}" alt="Episode ${episode.number}">
+                ${episode.thumbnail ? `<img src="${episode.thumbnail}" alt="Episode ${episode.number}">` : `<div class="placeholder-image">Episode ${episode.number}</div>`}
             </div>
             <div class="episode-content">
                 <span class="episode-number">Episode ${episode.number}</span>

@@ -47,12 +47,13 @@ body {
     gap: 40px;
 }
 
-.hero-banner {
-    max-width: 100%;
-    height: auto;
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 40px;
     animation: fadeInUp 0.8s ease-out;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-cta {
@@ -505,10 +506,21 @@ section {
     }
 }
 
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
-    .hero-banner {
-        max-width: 90%;
+    .hero-title {
+        font-size: 2.5rem;
     }
     
     .hero-cta {
